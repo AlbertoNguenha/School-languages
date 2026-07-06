@@ -1,15 +1,19 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
-   
-}.navegacao,ul{
-    color:white;
+
+}
+
+.navegacao,
+ul {
+    color: white;
     background-image: url("imagens/Capa-Guia-do-estudante-brasileiro.jpg");
     padding-block: 20px;
     border: 10px;
     box-sizing: 40px;
-   
-}ul{
+}
+
+ul {
     padding-left: 50px;
     inline-size: 50px;
     background-position: 10px;
@@ -17,6 +21,8 @@
     display: flex;
     gap: 200px;
     block-size: 15px;
-}a{
+}
+
+a {
     color: whitesmoke;
 }
