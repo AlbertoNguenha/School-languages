@@ -1,6 +1,6 @@
 *{
     margin: 0px;
-    padding: 0pc;
+    padding: 0px;
     background-color: rgba(45, 25, 158, 0.701);
 }form{
     margin: 20px;
@@ -15,4 +15,8 @@
     margin: 0px;
     padding-left: 14px;
     border-radius: 20px;
+    padding-right: 14px;
+}a{
+    color: white;
+    text-align: center;
 }
