@@ -16,7 +16,6 @@ ul {
 ul {
     padding-left: 50px;
     inline-size: 50px;
-    background-position: 10px;
     list-style: none;
     display: flex;
     gap: 200px;
@@ -24,5 +23,8 @@ ul {
 }
 
 a {
-    color: whitesmoke;
+    color:rgb(6, 37, 129);
+}h1{
+    text-align: center;
+    color: rgb(6, 37, 129);
 }
