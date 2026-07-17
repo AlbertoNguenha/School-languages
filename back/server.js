@@ -1,4 +1,5 @@
 import express, { json } from "express";
+const db=require("./db")
 
 const app=express();
 
