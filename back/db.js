@@ -4,7 +4,7 @@ const conexao=mysql.createConnectio({
     host:"localhost",
     user:"root",
     password:"1234",
-    database:""
+    database:"school_languages"
 });
 
 conexao.connect((erro)=>{
