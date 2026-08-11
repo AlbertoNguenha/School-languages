@@ -6,8 +6,8 @@ function validarFormulario(nome,morada,curso){
     return valido
 }
 
-function inserir(nome,morada,curso){
-    if(validarFormulario(nome,morada,curso)== true){
+async function inserir(nome,morada,curso){
+    if(validarFormulario(nome,morada,curso) == true){
         const inserir='insert into estudantes (nome,morada,curso) values(?,?,?)';
     }else{
         erro();
@@ -15,5 +15,5 @@ function inserir(nome,morada,curso){
 }
 
 function erro(){
-    console.error("ERRO!Por favor, insira corretamente os seus dados")
+    console.error("ERRO! Por favor, insira corretamente os seus dados")
 }
