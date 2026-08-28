@@ -1,6 +1,5 @@
 import express, { json } from "express";
-const db=require("./db")
-
+const service=require("./service")
 const app=express();
 
 app.use(express.json())
@@ -11,24 +10,25 @@ app.get("/pessoa", (req,res)=>{
     res.send(pessoa)
 })
 //cria um novo usuario
-app.post("/pessoa", (req,res)=>{
-    const {nome,curso, telefone}=req.body
-    pessoa.push({nome,curso, telefone})
-    res.json({
-        messagem:"Usuario criado com sucesso"
-    })
+app.post("/pessoa", async (req,res)=>{
+    try{
+        const {nome,morada,curso}=req.body;
+        await service.inserir(nome,morada,curso);
+    }catch{
+        console.error(error);
+        res.status(400).json({
+            messagem:"Cadastro nao efectuado"
+        });
+    }
 })
 //actualiza um usuario
 app.put("/pessoa/:id", (req,res)=>{
     const id=Number(req.params.id)
-    const i=pessoa.findIndex(u=>u.id==id)
+    const dados=req.body;
 
-    if(id==-1){
-        return res.status(404).json({messagem:"O usuario nao existe"})
-    }
-
-    pessoa[i]=req.body
-    res,json(pessoa[i])
+    res.json({
+        messagem:"Actualizar usuario", id,dados
+    });
 })
 
 app.listen(3000, ()=>{
